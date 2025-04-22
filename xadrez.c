@@ -1,30 +1,53 @@
 #include <stdio.h>
+    int main(){
 
-int main() {
-    int i;
+        int i = 1;
+        int u = 1;
 
-    // Movimento da Torre - 5 casas para a direita (usando for)
-    printf("Movimento da Torre:\n");
-    for(i = 1; i <= 5; i++) {
-        printf("Casa %d: Direita\n", i);
-    }
+        printf("Torre: ");
 
-    // Movimento do Bispo - 5 casas na diagonal para cima e à direita (usando while)
-    printf("\nMovimento do Bispo:\n");
-    i = 1;
-    while(i <= 5) {
-        printf("Casa %d: Cima, Direita\n", i);
-        i++;
-    }
+        for (int i = 1; i <= 5; i++)
+        {
+            printf("Direta ");
+        }
 
-    // Movimento da Rainha - 8 casas para a esquerda (usando do-while)
-    printf("\nMovimento da Rainha:\n");
-    i = 1;
-    do {
-        printf("Casa %d: Esquerda\n", i);
-        i++;
-    } while(i <= 8);
+        printf("\n\nBispo: ");
 
-    return 0;
+        while (i <= 5)
+        {
+            printf("Cima Direta ");
+            
+            i++;
+        }
+        
+        printf("\n\nRainha: ");
+
+        do
+        {
+            u++;
+            printf("Esquerda ");
+        } while (u <= 8);
+        
+        printf("\n\nCavalo: ");
+
+        int j = 1, t, o = 1;
+
+        while (j--)
+        {
+            for (t = 0; t < 2; t++)
+            {
+                printf("Cima ");
+            }
+            printf("Direita ou ");
+        }
+
+        while (o--)
+        {
+            for (t = 0; t < 2; t++)
+            {
+                printf("Cima ");
+            }
+            printf("Esquerda ");
+        }
+        
 }
-
