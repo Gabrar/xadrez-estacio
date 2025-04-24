@@ -1,53 +1,46 @@
 #include <stdio.h>
-    int main(){
 
-        int i = 1;
-        int u = 1;
+void movimentoTorre(int torre){
+    if(torre > 0){
+        printf("Esquerda ");
+        movimentoTorre(torre - 1);
+    }
+}
+void movimentoBispo(int bispo){
+    if (bispo > 0){
+        printf("Cima Direita ");
+        movimentoBispo(bispo - 1);
+    }
+}
+void movimentoRainha(int rainha){
+    if (rainha > 0){
+        printf("Direita ");
+        movimentoRainha(rainha - 1);
+    }
+}
+int main(){
+    int quantidadeTorre = 8;
+    int quantidadeBispo = 5;
+    int quantidadeRainha = 8;
 
-        printf("Torre: ");
+    printf("Torre: ");
+    movimentoTorre(quantidadeTorre);
 
-        for (int i = 1; i <= 5; i++)
+    printf("\n\nBispo: ");
+    movimentoBispo(quantidadeBispo);
+
+    printf("\n\nRainha: ");
+    movimentoRainha(quantidadeRainha);
+
+    printf("\n\nCavalo: ");
+
+    for (int i = 1; i <= 1; i++)
+    {
+        for (int j = 1; j <= 2; j++)
         {
-            printf("Direta ");
+            printf("CIMA ");
         }
-
-        printf("\n\nBispo: ");
-
-        while (i <= 5)
-        {
-            printf("Cima Direta ");
-            
-            i++;
-        }
-        
-        printf("\n\nRainha: ");
-
-        do
-        {
-            u++;
-            printf("Esquerda ");
-        } while (u <= 8);
-        
-        printf("\n\nCavalo: ");
-
-        int j = 1, t, o = 1;
-
-        while (j--)
-        {
-            for (t = 0; t < 2; t++)
-            {
-                printf("Cima ");
-            }
-            printf("Direita ou ");
-        }
-
-        while (o--)
-        {
-            for (t = 0; t < 2; t++)
-            {
-                printf("Cima ");
-            }
-            printf("Esquerda ");
-        }
-        
+        printf("DIREITA ");
+    }
+    
 }
